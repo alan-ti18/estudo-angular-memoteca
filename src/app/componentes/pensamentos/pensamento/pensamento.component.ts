@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { IPensamento } from '../IPensamento';
+import { PensamentoService } from '../pensamento.service';
 
 @Component({
   selector: 'app-pensamento',
@@ -12,15 +13,24 @@ export class PensamentoComponent {
     id: 0,
     conteudo: 'massa isso aqui',
     autoria: 'Sou Yo',
-    modelo: 'modelo3'
+    modelo: 'modelo3',
+    favorito: false
   }
 
-  constructor() {}
+  constructor(private service: PensamentoService) {}
 
   larguraPensamento(): string {
     if(this.pensamento.conteudo.length >= 256) {
       return 'pensamento-g'
     }
     return 'pensamento-p'
+  }
+
+  mudarIconeFavorito(): string {
+    return this.pensamento.favorito ? 'ativo' : 'inativo';
+  }
+
+  toggleFavorito(pensamento: IPensamento): void {
+    this.service.mudarFavorito(pensamento).subscribe();
   }
 }

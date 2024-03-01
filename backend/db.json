@@ -4,49 +4,57 @@
       "id": "1",
       "conteudo": "qualquer coisa",
       "autoria": "eu",
-      "modelo": "modelo1"
+      "modelo": "modelo1",
+      "favorito": false
     },
     {
       "id": "3",
       "conteudo": "Essa é a mensagem",
       "autoria": "alan",
-      "modelo": "modelo1"
+      "modelo": "modelo1",
+      "favorito": true
     },
     {
       "id": "2993",
       "conteudo": "Será que vai dar certo",
       "autoria": "Eu mesmo",
-      "modelo": "modelo2"
+      "modelo": "modelo2",
+      "favorito": true
     },
     {
       "id": "e784",
       "conteudo": "Deu certo. Só avisando",
       "autoria": "Eu também",
-      "modelo": "modelo1"
+      "modelo": "modelo1",
+      "favorito": true
     },
     {
       "id": "d870",
       "conteudo": "Teste",
       "autoria": "QA",
-      "modelo": "modelo1"
+      "modelo": "modelo1",
+      "favorito": false
     },
     {
       "id": "4628",
       "conteudo": "Alaba alab alaba",
       "autoria": "Alan",
-      "modelo": "modelo1"
+      "modelo": "modelo1",
+      "favorito": false
     },
     {
       "id": "03da",
       "conteudo": "Oh! quão bom e misericordioso é que o irmãos vivam em união.",
       "autoria": "Maçom",
-      "modelo": "modelo2"
+      "modelo": "modelo2",
+      "favorito": false
     },
     {
       "id": "760f",
       "conteudo": "Aprendendo Angular com carinho",
       "autoria": "aaaaa",
-      "modelo": "modelo3"
+      "modelo": "modelo3",
+      "favorito": false
     }
   ]
 }

@@ -64,6 +64,10 @@
     padding-left: 15px;
     border-radius: 10px;
   }
+
+  .buscar-pensamentos img {
+    cursor: pointer;
+  }
   
   @media screen and (min-width: 216px) {
     .buscar-pensamentos {

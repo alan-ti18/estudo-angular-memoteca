@@ -11,11 +11,15 @@ export class PensamentoService {
 
   constructor(private http: HttpClient) {}
 
-  listar(pagina: number): Observable<IPensamentoPaginado> {
+  listar(pagina: number, filtro: string): Observable<IPensamentoPaginado> {
     const itensPorPagina = 6;
     let params = new HttpParams()
       .set('_page', pagina)
       .set('_per_page', itensPorPagina)
+
+    // if (filtro.trim().length > 2) {
+    //   params = params.set("q", filtro);
+    // }
     return this.http.get<IPensamentoPaginado>(this.API, { params });
   }
 
@@ -36,5 +40,11 @@ export class PensamentoService {
   buscarPorId(pensamentoId: number): Observable<IPensamento> {
     const url = `${this.API}/${pensamentoId}`;
     return this.http.get<IPensamento>(url);
+  }
+
+  mudarFavorito(pensamento: IPensamento): Observable<IPensamento> {
+    pensamento.favorito = !pensamento.favorito;
+    const url = `${this.API}/${pensamento.id}`;
+    return this.http.patch<IPensamento>(url, {favorito: pensamento.favorito});
   }
 }
