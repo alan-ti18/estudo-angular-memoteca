@@ -10,7 +10,7 @@ import { PensamentoService } from '../pensamento.service';
 
 export class PensamentoComponent {
   @Input() pensamento: IPensamento = {
-    id: 0,
+    id: '0',
     conteudo: 'massa isso aqui',
     autoria: 'Sou Yo',
     modelo: 'modelo3',
@@ -20,10 +20,7 @@ export class PensamentoComponent {
   constructor(private service: PensamentoService) {}
 
   larguraPensamento(): string {
-    if(this.pensamento.conteudo.length >= 256) {
-      return 'pensamento-g'
-    }
-    return 'pensamento-p'
+    return this.pensamento.conteudo.length >= 256 ? 'pensamento-g' : 'pensamento-p';
   }
 
   mudarIconeFavorito(): string {
